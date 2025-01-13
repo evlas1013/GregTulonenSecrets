@@ -1,4 +1,9 @@
 let currentSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+
+
 const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
 
@@ -12,7 +17,31 @@ function moveSlide(direction) {
   }
   updateCarousel();
   updateURL();
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+  const swipeDistance = touchStartX - touchEndX;
+
+  if (swipeDistance > 50) {
+    // Swipe left, move to the next slide
+    moveSlide(1);
+  } else if (swipeDistance < -50) {
+    // Swipe right, move to the previous slide
+    moveSlide(-1);
+  }
+}
+
+
 
 function updateCarousel() {
   const carousel = document.querySelector('.carousel');
@@ -45,3 +74,9 @@ function getSlideFromURL() {
 
 // Initialize the carousel based on URL parameters
 getSlideFromURL();
+
+// Attach touch event listeners to the carousel
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('touchstart', handleTouchStart, { passive: true });
+carousel.addEventListener('touchmove', handleTouchMove, { passive: true });
+carousel.addEventListener('touchend', handleTouchEnd);
