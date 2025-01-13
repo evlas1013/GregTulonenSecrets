@@ -1,0 +1,98 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+/* Image Styling */
+.carousel img {
+  width: 600px; /* Fixed width to match captions */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain; /* Ensure the image fits within the space */
+  margin-bottom: 10px; /* Space between the image and caption */
+  border-radius: 10px; /* Match caption styling */
+}
+/* Captions */
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  text-align: left;
+  width: 600px;
+  margin: 10px auto 0; /* Adds space above and centers the caption */
+  border-radius: 10px; /* Add rounded corners */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.caption-header {
+  font-size: 22px; /* Bigger font for the header */
+  font-weight: bold;
+  color: #ffcc00; /* Golden color for the header */
+  margin-bottom: 10px; /* Space below the header */
+}
+.caption-text {
+  font-size: 18px; /* Regular font size for the caption text */
+}
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .caption {
+    font-size: 16px;
+    padding: 10px;
+    width: 90%; /* Make the caption wider on mobile */
+    border-radius: 8px; /* Slightly smaller radius on mobile */
+  }
+  .caption-header {
+    font-size: 18px; /* Adjust header size on mobile */
+    margin-bottom: 8px; /* Slightly smaller margin on mobile */
+  }
+  .prev, .next {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
