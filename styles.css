@@ -35,6 +35,7 @@ body {
   height: auto; /* Maintain aspect ratio */
   display: block;
   margin: 0 auto;
+  align-items: center;
   object-fit: contain; /* Ensure the image fits within the space */
   margin-bottom: 10px; /* Space between the image and caption */
   border-radius: 10px; /* Match caption styling */

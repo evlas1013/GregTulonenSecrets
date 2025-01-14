@@ -32,10 +32,10 @@ function handleTouchMove(event) {
 function handleTouchEnd() {
   const swipeDistance = touchStartX - touchEndX;
 
-  if (swipeDistance > 50) {
+  if (swipeDistance > 100) {
     // Swipe left, move to the next slide
     moveSlide(1);
-  } else if (swipeDistance < -50) {
+  } else if (swipeDistance < -100) {
     // Swipe right, move to the previous slide
     moveSlide(-1);
   }
