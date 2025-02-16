@@ -49,6 +49,24 @@ img.captionimage {
 }
 
 
+img.gridimage {
+   float: center;
+   width: 100%;
+   height: auto;
+}
+
+
+
+
+
+
+img.contact {
+   float: center;
+   width: 50%;
+   height: auto;
+}
+
+
  /* YouTube as header image */
  
 main {
@@ -113,6 +131,23 @@ main2 {
   font-size: 18px; /* Regular font size for the caption text */
 }
 
+
+
+
+.quote-text {
+  font: 16px normal Arial, sans-serif;
+  text-align: left;
+  width: 450px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  padding-left: 15px;
+  border-left: 3px solid #636161;
+} 
+
+
+
+
 a:link {
 	color: #000000;
 	text-decoration: none;
@@ -135,7 +170,7 @@ a:hover {
 /* Navigation Buttons */
 .prev, .next {
   position: fixed;
-  top: 360px;
+  top: 380px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -146,14 +181,26 @@ a:hover {
   transform: translateY(-50%);
 }
 .prev {
-  left: 25%;
+  left: 20%;
 }
 .next {
-  right: 25%;
+  right: 20%;
 }
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+ .ul { 
+ padding: 25; 
+ 
+ }
+
+
+
+
+.tab { 
+margin-left: 40px; }
 
 
 
@@ -185,6 +232,26 @@ a:hover {
     width: 80%; /* Make the caption wider on mobile */
     border-radius: 8px; /* Slightly smaller radius on mobile */
   }
+  
+  
+  
+
+
+.quote-text {
+  font: 14px normal Arial, sans-serif;
+  text-align: left;
+  width: 90%; 
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-left: 15px;
+  border-left: 3px solid #636161;
+} 
+  
+  
+  
+  
+  
   .caption-header {
     font-size: 18px; /* Adjust header size on mobile */
     margin-bottom: 8px; /* Slightly smaller margin on mobile */
@@ -193,7 +260,7 @@ a:hover {
     font-size: 28px;
     padding: 10px;
   position: fixed;
-  top: 460px
+  top: 480px
   }
   
   .prev {
@@ -205,6 +272,12 @@ a:hover {
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+  
+  
+  
+  
+  
+  
   
 
 .carousel img {
@@ -223,6 +296,24 @@ a:hover {
    width: 100%;
    height: auto;
 }
+
+
+img.gridimage {
+   float: center;
+   width: 100%;
+   height: auto;
+}
+
+
+
+
+img.contact {
+   float: center;
+   width: 50%;
+   height: auto;
+}
+
+
 
 main {
     display: flex;
